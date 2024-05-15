@@ -1,0 +1,4 @@
+need to clean the 'response' object to have only necessary data.
+
+link back: Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+
