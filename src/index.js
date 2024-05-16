@@ -1,4 +1,8 @@
 import * as css from "./index.css";
-import {fetchInitData} from './API.js';
+import { search } from "./processData.js";
 
-fetchInitData();
+
+(function() {
+    search();
+}) ();
+

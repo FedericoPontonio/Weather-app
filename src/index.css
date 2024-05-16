@@ -1,4 +1,31 @@
-html {
+body {
     background-color: rgb(226, 221, 221);
+    background-image: url(weatherBG.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+    display: grid;
 }
 
+.main {
+    width: 40vw;
+    display: grid;
+    justify-content: center;
+    background-color: rgba(50, 49, 49 , 0.8);
+    height: 98vh;
+    color: white;
+
+}
+.data {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+#search {
+    height: 20px;
+}
+.header {
+    height: 50px;
+    margin-top: 50px;
+}
