@@ -1,5 +1,5 @@
 import { fetchInputData } from "./API";
-import {renderLocationData, evaluateConditionIcon} from "./rendering.js";
+import {renderMainData, loadingScreen, removeLoadScreen} from "./rendering.js";
 
 
 export let processedData;
@@ -23,6 +23,7 @@ export function clearData(data) {
             'is_day' : data.current.is_day,
         }
     }
+    console.log(data)
 };
 
 
@@ -36,15 +37,15 @@ export async function search() {
     if (input == '') {
         input = 'cambiago'
     };
+    loadingScreen();
     const data = await fetchInputData(input);
     await clearData(data);
-    evaluateConditionIcon(processedData);
     //rendering
-    renderLocationData(processedData);
+    renderMainData(processedData);
+    removeLoadScreen();
+    //log
+(function logData() {
+    setTimeout(() => {console.log(processedData)}, 500);    
+}) ();
 };
 
-
-//log
-(function logData() {
-    setTimeout(() => {console.log(processedData)}, 500);
-}) ();

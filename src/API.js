@@ -1,7 +1,4 @@
 
-
-
-//async version
 export async function fetchInputData(userInput) {
     const response = await fetch('https://api.weatherapi.com/v1/current.json?key=b3a7ccb6424c4f468de143611241005&q=' + userInput, {mode: 'cors'});
     const data = await response.json();
