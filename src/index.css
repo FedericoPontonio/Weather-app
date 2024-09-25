@@ -67,13 +67,6 @@ body {
 #conditionIcon {
     height: 100px;
 }
-.data {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
-    height: 100%;
-}
 
 #search {
     height: 20px;
